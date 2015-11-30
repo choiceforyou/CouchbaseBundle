@@ -1,6 +1,6 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\DependencyInjection\Compiler;
+namespace Choiceforyou\CouchbaseBundle\Tests\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 

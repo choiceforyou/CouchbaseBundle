@@ -1,8 +1,8 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Repository;
+namespace Choiceforyou\CouchbaseBundle\Tests\Repository;
 
-use Toiine\CouchbaseBundle\Entity\DocumentInterface;
+use Choiceforyou\CouchbaseBundle\Entity\DocumentInterface;
 
 class FakeUserDocument implements DocumentInterface
 {

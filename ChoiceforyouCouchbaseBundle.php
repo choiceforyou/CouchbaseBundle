@@ -1,19 +1,19 @@
 <?php
 
-namespace Toiine\CouchbaseBundle;
+namespace Choiceforyou\CouchbaseBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Toiine\CouchbaseBundle\DependencyInjection\Compiler\CouchbaseCompilerPass;
-use Toiine\CouchbaseBundle\DependencyInjection\Compiler\ConnectionCompilerPass;
-use Toiine\CouchbaseBundle\DependencyInjection\Compiler\DocumentManagerCompilerPass;
-use Toiine\CouchbaseBundle\DependencyInjection\Compiler\RepositoryCompilerPass;
+use Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler\CouchbaseCompilerPass;
+use Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler\ConnectionCompilerPass;
+use Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler\DocumentManagerCompilerPass;
+use Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler\RepositoryCompilerPass;
 
 /**
  * @SuppressWarnings(PHPMD.StaticAccess)
  */
-class ToiineCouchbaseBundle extends Bundle
+class ChoiceforyouCouchbaseBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

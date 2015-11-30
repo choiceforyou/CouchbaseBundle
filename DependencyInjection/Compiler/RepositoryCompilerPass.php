@@ -1,20 +1,20 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\DependencyInjection\Compiler;
+namespace Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * Create dynamically the toiine_couchbase.repository.<connectionName> services using the configuration.
+ * Create dynamically the choiceforyou_couchbase.repository.<connectionName> services using the configuration.
  */
 class RepositoryCompilerPass extends AbstractCompilerPass implements CompilerPassInterface
 {
     /** @{@inheritdoc} */
     protected function getParameterKey()
     {
-        return 'toiine_couchbase.repositories';
+        return 'choiceforyou_couchbase.repositories';
     }
 
     /** @{@inheritdoc} */
@@ -30,7 +30,7 @@ class RepositoryCompilerPass extends AbstractCompilerPass implements CompilerPas
     public function getDefinition($name, array $params)
     {
         $serializerServiceId = isset($params['serializer'])? $params['serializer'] : null;
-        $repositoryClass = isset($params['repositoryClass'])? $params['repositoryClass'] : 'Toiine\CouchbaseBundle\Repository\Repository';
+        $repositoryClass = isset($params['repositoryClass'])? $params['repositoryClass'] : 'Choiceforyou\CouchbaseBundle\Repository\Repository';
 
         $args = array(
             new Reference($this->generateDocumentManagerServiceId($params['connection'])),

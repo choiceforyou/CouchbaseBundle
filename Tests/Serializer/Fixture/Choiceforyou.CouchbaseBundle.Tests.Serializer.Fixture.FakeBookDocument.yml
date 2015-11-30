@@ -1,4 +1,4 @@
-Toiine\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument:
+Choiceforyou\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument:
     properties:
         title:
             type: string

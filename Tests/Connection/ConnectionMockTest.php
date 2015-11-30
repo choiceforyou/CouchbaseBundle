@@ -1,10 +1,10 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Connection;
+namespace Choiceforyou\CouchbaseBundle\Tests\Connection;
 
 class ConnectionMockTest extends \PHPUnit_Framework_TestCase
 {
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::__construct */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::__construct */
     public function testConstructorWitoutArguments()
     {
         $conn = new ConnectionMock();
@@ -12,7 +12,7 @@ class ConnectionMockTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array(), $conn->getDocuments());
     }
 
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::__construct */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::__construct */
     public function testConstructorWitoutDocuments()
     {
         $documents = array(
@@ -24,7 +24,7 @@ class ConnectionMockTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($documents, $conn->getDocuments());
     }
 
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::setDocuments */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::setDocuments */
     public function testSetDocuments()
     {
         $documents = array(
@@ -37,7 +37,7 @@ class ConnectionMockTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($documents, $conn->getDocuments());
     }
 
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::set */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::set */
     public function testSet()
     {
         $documents = array(
@@ -49,7 +49,7 @@ class ConnectionMockTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($documents, $conn->getDocuments());
     }
 
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::get */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::get */
     public function testGet()
     {
         $documents = array(
@@ -60,7 +60,7 @@ class ConnectionMockTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array('value3'), $conn->get('key3'));
     }
 
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::get */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::get */
     public function testGetWithUnsetedKey()
     {
         $documents = array(
@@ -71,7 +71,7 @@ class ConnectionMockTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($conn->get('wrongKey'));
     }
 
-    /** @covers Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock::delete */
+    /** @covers Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock::delete */
     public function testDelete()
     {
         $documents = array(

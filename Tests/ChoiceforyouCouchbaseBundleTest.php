@@ -1,15 +1,15 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\DependencyInjection;
+namespace Choiceforyou\CouchbaseBundle\Tests\DependencyInjection;
 
-use Toiine\CouchbaseBundle\ToiineCouchbaseBundle;
+use Choiceforyou\CouchbaseBundle\ChoiceforyouCouchbaseBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class ToiineCouchbaseBundleTest extends \PHPUnit_Framework_TestCase
+class ChoiceforyouCouchbaseBundleTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->bundle = new ToiineCouchbaseBundle();
+        $this->bundle = new ChoiceforyouCouchbaseBundle();
         $this->container = new ContainerBuilder();
     }
 
@@ -20,15 +20,15 @@ class ToiineCouchbaseBundleTest extends \PHPUnit_Framework_TestCase
 
     public function testBuildWithoutRepository()
     {
-        $this->container->setParameter('toiine_couchbase.connections',  $this->getConnectionsParameters());
+        $this->container->setParameter('choiceforyou_couchbase.connections',  $this->getConnectionsParameters());
 
         $this->bundle->build($this->container);
     }
 
     public function testBuild()
     {
-        $this->container->setParameter('toiine_couchbase.connections',  $this->getConnectionsParameters());
-        $this->container->setParameter('toiine_couchbase.repositories',  $this->getRepositoriesParameters());
+        $this->container->setParameter('choiceforyou_couchbase.connections',  $this->getConnectionsParameters());
+        $this->container->setParameter('choiceforyou_couchbase.repositories',  $this->getRepositoriesParameters());
 
         $this->bundle->build($this->container);
     }

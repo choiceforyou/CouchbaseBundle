@@ -1,13 +1,13 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\DependencyInjection\Compiler;
+namespace Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * Create dynamically the toiine_couchbase.document_manager.<connectionName> services using the configuration.
+ * Create dynamically the choiceforyou_couchbase.document_manager.<connectionName> services using the configuration.
  */
 class DocumentManagerCompilerPass extends AbstractCompilerPass implements CompilerPassInterface
 {
@@ -29,7 +29,7 @@ class DocumentManagerCompilerPass extends AbstractCompilerPass implements Compil
         );
 
         // Build definition
-        $definition = new Definition('Toiine\CouchbaseBundle\Manager\DocumentManager', $args);
+        $definition = new Definition('Choiceforyou\CouchbaseBundle\Manager\DocumentManager', $args);
 
         return $definition;
     }

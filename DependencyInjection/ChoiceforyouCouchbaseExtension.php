@@ -1,6 +1,6 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\DependencyInjection;
+namespace Choiceforyou\CouchbaseBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
  */
-class ToiineCouchbaseExtension extends Extension
+class ChoiceforyouCouchbaseExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -24,8 +24,8 @@ class ToiineCouchbaseExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('toiine_couchbase.connections',  $config['connections']);
-        $container->setParameter('toiine_couchbase.repositories', $config['repositories']);
+        $container->setParameter('choiceforyou_couchbase.connections',  $config['connections']);
+        $container->setParameter('choiceforyou_couchbase.repositories', $config['repositories']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');

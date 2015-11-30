@@ -1,6 +1,6 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\DependencyInjection\Compiler;
+namespace Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -14,7 +14,7 @@ abstract class AbstractCompilerPass implements CompilerPassInterface
      */
     protected function getParameterKey()
     {
-        return 'toiine_couchbase.connections';
+        return 'choiceforyou_couchbase.connections';
     }
 
     /**
@@ -86,7 +86,7 @@ abstract class AbstractCompilerPass implements CompilerPassInterface
      */
     public function generateCouchbaseServiceId($connectionName)
     {
-        return sprintf('toiine_couchbase.%s', $connectionName);
+        return sprintf('choiceforyou_couchbase.%s', $connectionName);
     }
 
     /**
@@ -98,7 +98,7 @@ abstract class AbstractCompilerPass implements CompilerPassInterface
      */
     public function generateConnectionServiceId($connectionName)
     {
-        return sprintf('toiine_couchbase.connection.%s', $connectionName);
+        return sprintf('choiceforyou_couchbase.connection.%s', $connectionName);
     }
 
     /**
@@ -110,7 +110,7 @@ abstract class AbstractCompilerPass implements CompilerPassInterface
      */
     public function generateDocumentManagerServiceId($connectionName)
     {
-        return sprintf('toiine_couchbase.document_manager.%s', $connectionName);
+        return sprintf('choiceforyou_couchbase.document_manager.%s', $connectionName);
     }
 
     /**
@@ -122,6 +122,6 @@ abstract class AbstractCompilerPass implements CompilerPassInterface
      */
     public function generateRepositoryServiceId($repositoryName)
     {
-        return sprintf('toiine_couchbase.repository.%s', $repositoryName);
+        return sprintf('choiceforyou_couchbase.repository.%s', $repositoryName);
     }
 }

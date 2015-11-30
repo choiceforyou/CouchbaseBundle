@@ -1,6 +1,6 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Entity;
+namespace Choiceforyou\CouchbaseBundle\Entity;
 
 /**
  * Represent a Couchbase document.

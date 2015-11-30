@@ -1,4 +1,4 @@
-Toiine\CouchbaseBundle\Tests\Repository\FakeUserDocument:
+Choiceforyou\CouchbaseBundle\Tests\Repository\FakeUserDocument:
     properties:
         firstname:
             expose: true

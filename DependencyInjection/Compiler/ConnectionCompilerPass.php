@@ -1,13 +1,13 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\DependencyInjection\Compiler;
+namespace Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * Create dynamically the toiine_couchbase.connection.<connectionName> services using the configuration.
+ * Create dynamically the choiceforyou_couchbase.connection.<connectionName> services using the configuration.
  */
 class ConnectionCompilerPass extends AbstractCompilerPass implements CompilerPassInterface
 {
@@ -30,7 +30,7 @@ class ConnectionCompilerPass extends AbstractCompilerPass implements CompilerPas
         );
 
         // Build definition
-        $definition = new Definition('Toiine\CouchbaseBundle\Connection\Connection', $args);
+        $definition = new Definition('Choiceforyou\CouchbaseBundle\Connection\Connection', $args);
 
         return $definition;
     }

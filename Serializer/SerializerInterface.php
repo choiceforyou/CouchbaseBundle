@@ -1,8 +1,8 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Serializer;
+namespace Choiceforyou\CouchbaseBundle\Serializer;
 
-use Toiine\CouchbaseBundle\Entity\DocumentInterface;
+use Choiceforyou\CouchbaseBundle\Entity\DocumentInterface;
 
 /**
  * Interface for a json serializer.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Serializer;
+namespace Choiceforyou\CouchbaseBundle\Tests\Serializer;
 
-use Toiine\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument;
-use Toiine\CouchbaseBundle\Serializer\Serializer;
+use Choiceforyou\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument;
+use Choiceforyou\CouchbaseBundle\Serializer\Serializer;
 use JMS\Serializer\SerializerBuilder;
 
 /**
@@ -22,8 +22,8 @@ class SerializerTest extends \PHPUnit_Framework_TestCase
         $this->json['short']   = $this->getJson('short');
         $this->json['details'] = $this->getJson('details');
 
-        $this->serializer['short']   = new Serializer($jmsSerializer, 'Toiine\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument', 'short');
-        $this->serializer['details'] = new Serializer($jmsSerializer, 'Toiine\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument', 'details');
+        $this->serializer['short']   = new Serializer($jmsSerializer, 'Choiceforyou\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument', 'short');
+        $this->serializer['details'] = new Serializer($jmsSerializer, 'Choiceforyou\CouchbaseBundle\Tests\Serializer\Fixture\FakeBookDocument', 'details');
     }
 
     public function testSerialize()

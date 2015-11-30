@@ -1,11 +1,11 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Repository;
+namespace Choiceforyou\CouchbaseBundle\Repository;
 
-use Toiine\CouchbaseBundle\Manager\DocumentManager;
-use Toiine\CouchbaseBundle\Serializer\SerializerInterface;
-use Toiine\CouchbaseBundle\Entity\Document;
-use Toiine\CouchbaseBundle\Entity\DocumentInterface;
+use Choiceforyou\CouchbaseBundle\Manager\DocumentManager;
+use Choiceforyou\CouchbaseBundle\Serializer\SerializerInterface;
+use Choiceforyou\CouchbaseBundle\Entity\Document;
+use Choiceforyou\CouchbaseBundle\Entity\DocumentInterface;
 
 /**
  * Class to request Couchbase bucket for a given Document type.

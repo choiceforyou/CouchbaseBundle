@@ -1,8 +1,8 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Serializer\Fixture;
+namespace Choiceforyou\CouchbaseBundle\Tests\Serializer\Fixture;
 
-use Toiine\CouchbaseBundle\Entity\DocumentInterface;
+use Choiceforyou\CouchbaseBundle\Entity\DocumentInterface;
 
 class FakeBookDocument implements DocumentInterface
 {

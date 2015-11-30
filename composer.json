@@ -1,7 +1,7 @@
 {
-    "name": "toiine/couchbasebundle",
+    "name": "choiceforyou/couchbasebundle",
     "description": "Symfony2 bundle to manipulate Couchbase Documents.",
-    "homepage": "https://github.com/toiine/CouchbaseBundle",
+    "homepage": "https://github.com/choiceforyou/CouchbaseBundle",
     "type": "symfony-bundle",
     "keywords": ["couchbase"],
     "time": "2013-07-24",
@@ -24,10 +24,10 @@
     "require-dev": {
         "Phake/Phake": "v1.0.3"
     },
-    "target-dir": "Toiine/CouchbaseBundle",
+    "target-dir": "Choiceforyou/CouchbaseBundle",
     "autoload": {
         "psr-0": {
-            "Toiine\\CouchbaseBundle": ""
+            "Choiceforyou\\CouchbaseBundle": ""
         }
     }
 }

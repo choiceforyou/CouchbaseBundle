@@ -1,8 +1,8 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\DependencyInjection;
+namespace Choiceforyou\CouchbaseBundle\Tests\DependencyInjection;
 
-use Toiine\CouchbaseBundle\DependencyInjection\Configuration;
+use Choiceforyou\CouchbaseBundle\DependencyInjection\Configuration;
 use Symfony\Component\Config\Definition\Processor;
 
 class ConfigurationTest extends \PHPUnit_Framework_TestCase
@@ -118,7 +118,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
                         'foo' => array(
                             'connection'      => 'conn1',
                             'serializer'      => 'jms_serializer',
-                            'repositoryClass' => 'Toiine\CouchbaseBundle\Repository\Repository'
+                            'repositoryClass' => 'Choiceforyou\CouchbaseBundle\Repository\Repository'
                         ),
                         'bar' => array(
                             'connection'      => 'conn1',

@@ -1,10 +1,10 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Manager;
+namespace Choiceforyou\CouchbaseBundle\Tests\Manager;
 
-use Toiine\CouchbaseBundle\Manager\DocumentManager;
-use Toiine\CouchbaseBundle\Tests\Connection\ConnectionMock;
-use Toiine\CouchbaseBundle\Entity\Document;
+use Choiceforyou\CouchbaseBundle\Manager\DocumentManager;
+use Choiceforyou\CouchbaseBundle\Tests\Connection\ConnectionMock;
+use Choiceforyou\CouchbaseBundle\Entity\Document;
 
 class DocumentManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,16 +20,16 @@ class DocumentManagerTest extends \PHPUnit_Framework_TestCase
         $this->manager = new DocumentManager($connection);
     }
 
-    /** covers Toiine\CouchbaseBundle\Manager\DocumentManager::get */
+    /** covers Choiceforyou\CouchbaseBundle\Manager\DocumentManager::get */
     public function testGet()
     {
         $document = $this->manager->get('key1');
 
-        $this->assertInstanceOf('Toiine\CouchbaseBundle\Entity\Document', $document);
+        $this->assertInstanceOf('Choiceforyou\CouchbaseBundle\Entity\Document', $document);
         $this->assertNull($this->manager->get('wrongKey'));
     }
 
-    /** covers Toiine\CouchbaseBundle\Manager\DocumentManager::set */
+    /** covers Choiceforyou\CouchbaseBundle\Manager\DocumentManager::set */
     public function testSet()
     {
         $doc = new Document('key3', array('value3'));
@@ -38,7 +38,7 @@ class DocumentManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($doc, $this->manager->get('key3'));
     }
 
-    /** covers Toiine\CouchbaseBundle\Manager\DocumentManager::set */
+    /** covers Choiceforyou\CouchbaseBundle\Manager\DocumentManager::set */
     public function testDelete()
     {
         $doc = new Document('key1', array('value1'));

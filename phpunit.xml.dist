@@ -13,7 +13,7 @@
 >
 
     <testsuites>
-        <testsuite name="Toiine CouchbaseBundle Test Suite">
+        <testsuite name="Choiceforyou CouchbaseBundle Test Suite">
             <directory>./Tests/</directory>
         </testsuite>
     </testsuites>

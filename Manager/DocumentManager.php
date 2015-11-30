@@ -1,9 +1,9 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Manager;
+namespace Choiceforyou\CouchbaseBundle\Manager;
 
-use Toiine\CouchbaseBundle\Entity\Document;
-use Toiine\CouchbaseBundle\Connection\ConnectionInterface;
+use Choiceforyou\CouchbaseBundle\Entity\Document;
+use Choiceforyou\CouchbaseBundle\Connection\ConnectionInterface;
 
 /**
  * Get/Set/Delete Document objects through a connection to a Couchbase bucket.

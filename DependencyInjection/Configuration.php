@@ -1,6 +1,6 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\DependencyInjection;
+namespace Choiceforyou\CouchbaseBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -20,7 +20,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('toiine_couchbase');
+        $rootNode = $treeBuilder->root('choiceforyou_couchbase');
 
         $rootNode
             ->children()
@@ -96,7 +96,7 @@ class Configuration implements ConfigurationInterface
                     ->end()
                     ->scalarNode('repositoryClass')
                         ->cannotBeEmpty()
-                        ->defaultValue('Toiine\CouchbaseBundle\Repository\Repository')
+                        ->defaultValue('Choiceforyou\CouchbaseBundle\Repository\Repository')
                     ->end()
                 ->end()
             ->end()

@@ -1,9 +1,9 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Serializer;
+namespace Choiceforyou\CouchbaseBundle\Serializer;
 
 use JMS\Serializer\SerializerInterface as JMSSerializerInterface;
-use Toiine\CouchbaseBundle\Entity\DocumentInterface;
+use Choiceforyou\CouchbaseBundle\Entity\DocumentInterface;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\DeserializationContext;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Connection;
+namespace Choiceforyou\CouchbaseBundle\Tests\Connection;
 
-use Toiine\CouchbaseBundle\Connection\Connection;
+use Choiceforyou\CouchbaseBundle\Connection\Connection;
 
 require_once 'Phake.php';
 use \Phake;
 
 class ConnectionTest extends \PHPUnit_Framework_TestCase
 {
-    /** @covers Toiine\CouchbaseBundle\Connection\Connection::__construct */
+    /** @covers Choiceforyou\CouchbaseBundle\Connection\Connection::__construct */
     public function setUp()
     {
         if (!extension_loaded('couchbase')) {
@@ -24,7 +24,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         $this->connection = new Connection($this->couchbase);
     }
 
-    /** @covers Toiine\CouchbaseBundle\Connection\Connection::get */
+    /** @covers Choiceforyou\CouchbaseBundle\Connection\Connection::get */
     public function testGet()
     {
         $this->connection->get('key');
@@ -32,7 +32,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         Phake::verify($this->couchbase)->get('key');
     }
 
-    /** @covers Toiine\CouchbaseBundle\Connection\Connection::set */
+    /** @covers Choiceforyou\CouchbaseBundle\Connection\Connection::set */
     public function testSet()
     {
         $this->connection->set('key', array('value'));
@@ -40,7 +40,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         Phake::verify($this->couchbase)->set('key', array('value'));
     }
 
-    /** @covers Toiine\CouchbaseBundle\Connection\Connection::delete */
+    /** @covers Choiceforyou\CouchbaseBundle\Connection\Connection::delete */
     public function testDelete()
     {
         $this->connection->delete('key');
@@ -48,7 +48,7 @@ class ConnectionTest extends \PHPUnit_Framework_TestCase
         Phake::verify($this->couchbase)->delete('key');
     }
 
-    /** @covers Toiine\CouchbaseBundle\Connection\Connection::view */
+    /** @covers Choiceforyou\CouchbaseBundle\Connection\Connection::view */
     public function testView()
     {
         $this->connection->view('designDocument', 'viewName', array('opt1' => 'val'), true);

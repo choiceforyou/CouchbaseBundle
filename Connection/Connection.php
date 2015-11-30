@@ -1,6 +1,6 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Connection;
+namespace Choiceforyou\CouchbaseBundle\Connection;
 
 use Couchbase;
 

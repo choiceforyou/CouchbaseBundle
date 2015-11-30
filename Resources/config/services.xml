@@ -6,7 +6,7 @@
 
     <!--
     <parameters>
-        <parameter key="toine_couchbase.example.class">Toiine\Bundle\CouchbaseBundle\Example</parameter>
+        <parameter key="toine_couchbase.example.class">Choiceforyou\Bundle\CouchbaseBundle\Example</parameter>
     </parameters>
 
     <services>

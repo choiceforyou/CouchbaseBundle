@@ -1,29 +1,29 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\DependencyInjection\Compiler;
+namespace Choiceforyou\CouchbaseBundle\Tests\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-use Toiine\CouchbaseBundle\DependencyInjection\Compiler\RepositoryCompilerPass;
+use Choiceforyou\CouchbaseBundle\DependencyInjection\Compiler\RepositoryCompilerPass;
 
 class RepositoryCompilerPassTest extends CompilerPassTestCase
 {
     public function testProcessHasBuiltAllServices()
     {
         $container = new ContainerBuilder();
-        $container->setParameter('toiine_couchbase.connections',  $this->getConnectionsParameters());
-        $container->setParameter('toiine_couchbase.repositories', $this->getRepositoriesParameters());
+        $container->setParameter('choiceforyou_couchbase.connections',  $this->getConnectionsParameters());
+        $container->setParameter('choiceforyou_couchbase.repositories', $this->getRepositoriesParameters());
 
         $this->process($container);
 
         // Repository services
-        $this->assertTrue($container->hasDefinition('toiine_couchbase.repository.foo'));
-        $def = $container->getDefinition('toiine_couchbase.repository.foo');
-        $this->assertEquals('Toiine\CouchbaseBundle\Repository\Repository', $def->getClass());
-        $this->assertEquals('toiine_couchbase.document_manager.conn1', $def->getArgument(0));
+        $this->assertTrue($container->hasDefinition('choiceforyou_couchbase.repository.foo'));
+        $def = $container->getDefinition('choiceforyou_couchbase.repository.foo');
+        $this->assertEquals('Choiceforyou\CouchbaseBundle\Repository\Repository', $def->getClass());
+        $this->assertEquals('choiceforyou_couchbase.document_manager.conn1', $def->getArgument(0));
 
-        $this->assertTrue($container->hasDefinition('toiine_couchbase.repository.bar'));
-        $this->assertEquals('Vendor\\Bundle\\BarBundle\\epository\\BarRepository', $container->getDefinition('toiine_couchbase.repository.bar')->getClass());
+        $this->assertTrue($container->hasDefinition('choiceforyou_couchbase.repository.bar'));
+        $this->assertEquals('Vendor\\Bundle\\BarBundle\\epository\\BarRepository', $container->getDefinition('choiceforyou_couchbase.repository.bar')->getClass());
     }
 
     protected function process(ContainerBuilder $container)

@@ -3,7 +3,7 @@ CouchbaseBundle
 
 Symfony2 bundle to manipulate Couchbase Documents.
 
-[![Build Status](https://travis-ci.org/toiine/CouchbaseBundle.png?branch=master)](https://travis-ci.org/toiine/CouchbaseBundle) [![Build Status](https://travis-ci.org/toiine/CouchbaseBundle.png?branch=develop)](https://travis-ci.org/toiine/CouchbaseBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/aed516f2-7cab-4fcb-a93a-e435a126a0a9/mini.png)](https://insight.sensiolabs.com/projects/aed516f2-7cab-4fcb-a93a-e435a126a0a9)
+[![Build Status](https://travis-ci.org/choiceforyou/CouchbaseBundle.png?branch=master)](https://travis-ci.org/choiceforyou/CouchbaseBundle) [![Build Status](https://travis-ci.org/choiceforyou/CouchbaseBundle.png?branch=develop)](https://travis-ci.org/choiceforyou/CouchbaseBundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/aed516f2-7cab-4fcb-a93a-e435a126a0a9/mini.png)](https://insight.sensiolabs.com/projects/aed516f2-7cab-4fcb-a93a-e435a126a0a9)
 
 ## Installation
 
@@ -11,7 +11,7 @@ Installing the bundle via packagist is the quickest and simplest method of insta
 
 ### Step 1: Composer require
 
-    $ php composer.phar require "toiine/couchbasebundle":"dev-master"
+    $ php composer.phar require "choiceforyou/couchbasebundle":"dev-master"
 
 ### Step 2: Enable the bundle in the kernel
 ```php
@@ -22,7 +22,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Toiine\CouchbaseBundle\ToiineCouchbaseBundle(),
+        new Choiceforyou\CouchbaseBundle\ChoiceforyouCouchbaseBundle(),
         // ...
     );
 }
@@ -59,10 +59,10 @@ php app/console container:debug | grep couchbase
 
 | Service name        | Class           |
 | ------------- | ------------- |
-| toiine_couchbase.conn1 | Couchbase |
-| toiine_couchbase.conn2 | Couchbase |
+| choiceforyou_couchbase.conn1 | Couchbase |
+| choiceforyou_couchbase.conn2 | Couchbase |
 
-You can use toiine_couchbase.\<connectionName\> services to manipulate you documents.
+You can use choiceforyou_couchbase.\<connectionName\> services to manipulate you documents.
 
 NB: documentation on other services will come soon.
 
@@ -79,7 +79,7 @@ class DocController
 {
     public function getDocumentAction($key)
     {
-        $couchbase = $this->get('toiine_couchbase.conn1');
+        $couchbase = $this->get('choiceforyou_couchbase.conn1');
         
         // Get a doc from couchbase
         $doc = $couchbase->get($key);

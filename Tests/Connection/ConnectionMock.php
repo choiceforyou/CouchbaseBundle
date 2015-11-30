@@ -1,8 +1,8 @@
 <?php
 
-namespace Toiine\CouchbaseBundle\Tests\Connection;
+namespace Choiceforyou\CouchbaseBundle\Tests\Connection;
 
-use Toiine\CouchbaseBundle\Connection\ConnectionInterface;
+use Choiceforyou\CouchbaseBundle\Connection\ConnectionInterface;
 
 /**
  * Mock a Couchbase connection for tests.
